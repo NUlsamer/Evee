@@ -9,6 +9,12 @@
 import React, {Component} from 'react';
 import firebase from 'react-native-firebase';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import {SwitchNavigator} from 'react-navigation'
+
+
+//importing screens
+import login from './src/login'
+import signup from './src/signup'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -17,51 +23,15 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-const firebasetest = platform.select({
-   ios: 'TestAndroid',
-   android: 'Test Text Field',
 
-});
-
-firebase.auth()
-.signInAnonymously()
-.then(credential => {
-  if (credential) {
-    console.log('default app user ->', credential.user.toJSON());
+const App = SwitchNavigator (
+  {
+    signup,
+    login
+  },
+  {
+    initialRouteName: 'signup'
   }
-});
+)
 
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-        <Text style={styles.instructions}>{firebasetest}</Text>
-
-      </View>
-      
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+export default App
