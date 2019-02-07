@@ -7,6 +7,7 @@
  */
 
 import React, {Component} from 'react';
+import firebase from 'react-native-firebase';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
 const instructions = Platform.select({
@@ -14,6 +15,20 @@ const instructions = Platform.select({
   android:
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
+});
+
+const firebasetest = platform.select({
+   ios: 'TestAndroid',
+   android: 'Test Text Field',
+
+});
+
+firebase.auth()
+.signInAnonymously()
+.then(credential => {
+  if (credential) {
+    console.log('default app user ->', credential.user.toJSON());
+  }
 });
 
 type Props = {};
@@ -24,7 +39,10 @@ export default class App extends Component<Props> {
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
+        <Text style={styles.instructions}>{firebasetest}</Text>
+
       </View>
+      
     );
   }
 }
