@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Button} from 'react-native'
 
 
 class LandingPageScreen extends React.Component {
@@ -9,15 +9,15 @@ class LandingPageScreen extends React.Component {
   render() {
       return (
 
-        
+
         <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
           <Text>Home Screen</Text>
-          <button title = "Create Event"
+          <Button title = "Create Event"
         onpress={(this.props.navigation.navigate('CreateEvent'))}>
-        </button>
-        <button title = "View Profile"
+        </Button>
+        <Button title = "View Profile"
         onpress={(this.props.navigation.navigate('Profile'))}>
-        </button>
+        </Button>
         </View>
       );
     }

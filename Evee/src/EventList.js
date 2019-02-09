@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, SectionList, styles} from 'react-native';
 
 class EventList extends React.Component {
     render() {

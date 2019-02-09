@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Button} from 'react-native';
 
 
 class CreateEventScreen extends React.Component {
@@ -8,9 +8,9 @@ class CreateEventScreen extends React.Component {
         return (
             <View>
                 <Text>Create Event Screen comes here</Text>
-                <button title = "Go Back"
+                <Button title = "Go Back"
                     onpress={(this.props.navigation.navigate('Home'))}>
-                </button>
+                </Button>
             </View>
         );
     }

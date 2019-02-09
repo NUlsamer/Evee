@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Button} from 'react-native';
 
 class ProfileScreen extends React.Component {
     
@@ -7,9 +7,9 @@ class ProfileScreen extends React.Component {
         return (
         <View>
             <Text>Profile comes here</Text>
-            <button title = "Go Back"
+            <Button title = "Go Back"
                 onpress={(this.props.navigation.navigate('Home'))}>
-            </button>
+            </Button>
         </View>
         );
     }

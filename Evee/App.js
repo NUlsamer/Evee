@@ -12,8 +12,8 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 //import screens
 import LandingPageScreen from './src/LandingPageScreen';
-import login from './src/login';
-import signup from './src/signup';
+import Login from './src/login';
+import SignUp from './src/signup';
 import ProfileScreen from './src/ProfileScreen';
 import CreateEventScreen from './src/CreateEventScreen';
 
@@ -23,8 +23,8 @@ const AppNavigator = createStackNavigator (
     Home: LandingPageScreen,
     CreatEvent: CreateEventScreen,
     Profile: ProfileScreen,
-    Login: login,
-    SignUp: signup
+    Login: Login,
+    SignUp: SignUp
   },
   {
   initialRouteName: 'Home'  
