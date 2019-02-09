@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "733892197454",
+    "firebase_url": "https://evee-a1117.firebaseio.com",
+    "project_id": "evee-a1117",
+    "storage_bucket": "evee-a1117.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733892197454:android:a35d32b66455b568",
+        "android_client_info": {
+          "package_name": "com.evee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733892197454-qau8lufurt5ecrcu6s1omt3o9oisso7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-6RrW15FtQvvMNsUdZ3eTdT9g-9ICDOc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
