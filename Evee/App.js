@@ -9,6 +9,8 @@ import SignUp from './src/signup';
 import ProfileScreen from './src/ProfileScreen';
 import CreateEventScreen from './src/CreateEventScreen';
 import EventList from './src/EventList';
+import FavoriteEventsScreen from './src/LandingPageScreen'; 
+import PictureScreen from './src/PictureScreen';
 
 const AppNavigator = createStackNavigator ( 
   {
@@ -17,7 +19,9 @@ const AppNavigator = createStackNavigator (
     Profile: ProfileScreen,
     Login: Login,
     SignUp: SignUp,
-    EventList: EventList
+    EventList: EventList,
+    FavoriteEvents: FavoriteEventsScreen,
+    Picture: PictureScreen,
   },
   {
   initialRouteName: 'Home'  

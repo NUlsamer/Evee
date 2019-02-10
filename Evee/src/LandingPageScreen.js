@@ -8,8 +8,6 @@ class LandingPageScreen extends React.Component {
   };  
   render() {
       return (
-
-
         <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
           <Text>Home Screen</Text>
           <Button
@@ -28,6 +26,12 @@ class LandingPageScreen extends React.Component {
           title="View Events"
           onPress={() =>
             this.props.navigation.navigate('EventList')
+          }
+        />
+        <Button
+          title="signup"
+          onPress={() =>
+            this.props.navigation.navigate('SignUp')
           }
         />
         </View>
