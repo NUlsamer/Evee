@@ -8,9 +8,12 @@ class CreateEventScreen extends React.Component {
         return (
             <View>
                 <Text>Create Event Screen comes here</Text>
-                <Button title = "Go Back"
-                    onpress={(this.props.navigation.navigate('Home'))}>
-                </Button>
+                <Button
+          title="Go Back"
+          onPress={() =>
+            this.props.navigation.navigate('Home')
+          }
+        />
             </View>
         );
     }

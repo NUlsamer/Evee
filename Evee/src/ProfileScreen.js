@@ -6,10 +6,16 @@ class ProfileScreen extends React.Component {
     render() {
         return (
         <View>
-            <Text>Profile comes here</Text>
-            <Button title = "Go Back"
-                onpress={(this.props.navigation.navigate('Home'))}>
-            </Button>
+            <Text>Profilepic comes here</Text>
+            <Text>Profilename</Text>
+            <Text>Age</Text>
+            <Button title = "See Profilename's Events"/>
+            <Button
+                title="Go Back"
+                onPress={() =>
+                this.props.navigation.navigate('Home')
+                }
+                />
         </View>
         );
     }

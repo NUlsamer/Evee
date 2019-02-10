@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, SectionList, styles} from 'react-native';
+import {Platform, StyleSheet, Text, View, SectionList} from 'react-native';
 
 class EventList extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
+            <View>
                 <SectionList
                     sections={[
                         {title: 'Subscribed Events', data: [
@@ -13,8 +13,8 @@ class EventList extends React.Component {
                         {title: 'Other Events', data: [
                             'Event 1', 'Event 2', 'Event 3']},
                     ]}
-                renderItem={({item}) => <Text style={styles.item}>{item}</Text>}
-                renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
+                renderItem={({item}) => <Text>{item}</Text>}
+                renderSectionHeader={({section}) => <Text>{section.title}</Text>}
                 keyExtractor={(item, index) => index}
             />
             </View>
@@ -23,3 +23,5 @@ class EventList extends React.Component {
     
 
 }
+
+export default EventList;

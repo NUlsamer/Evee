@@ -12,12 +12,24 @@ class LandingPageScreen extends React.Component {
 
         <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
           <Text>Home Screen</Text>
-          <Button title = "Create Event"
-        onpress={(this.props.navigation.navigate('CreateEvent'))}>
-        </Button>
-        <Button title = "View Profile"
-        onpress={(this.props.navigation.navigate('Profile'))}>
-        </Button>
+          <Button
+          title="Create Event"
+          onPress={() =>
+            this.props.navigation.navigate('CreateEvent')
+          }
+        />
+          <Button
+          title="View Profile"
+          onPress={() =>
+            this.props.navigation.navigate('Profile')
+          }
+        />
+          <Button
+          title="View Events"
+          onPress={() =>
+            this.props.navigation.navigate('EventList')
+          }
+        />
         </View>
       );
     }

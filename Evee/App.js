@@ -16,15 +16,16 @@ import Login from './src/login';
 import SignUp from './src/signup';
 import ProfileScreen from './src/ProfileScreen';
 import CreateEventScreen from './src/CreateEventScreen';
-
+import EventList from './src/EventList';
 
 const AppNavigator = createStackNavigator ( 
   {
     Home: LandingPageScreen,
-    CreatEvent: CreateEventScreen,
+    CreateEvent: CreateEventScreen,
     Profile: ProfileScreen,
     Login: Login,
-    SignUp: SignUp
+    SignUp: SignUp,
+    EventList: EventList
   },
   {
   initialRouteName: 'Home'  
