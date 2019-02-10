@@ -1,31 +1,27 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View} from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-import React, {Component} from 'react'
-import firebase from 'react-native-firebase'
-import { Platform, StyleSheet, Text, View } from 'react-native'
-import { SwitchNavigator } from 'react-navigation'
+//import screens
+import LandingPageScreen from './src/LandingPageScreen';
+import Login from './src/login';
+import SignUp from './src/signup';
+import ProfileScreen from './src/ProfileScreen';
+import CreateEventScreen from './src/CreateEventScreen';
+import EventList from './src/EventList';
 
-
-
-//importing screens
-import login from './src/login'
-import signup from './src/signup'
-
-const App = SwitchNavigator(
+const AppNavigator = createStackNavigator ( 
   {
-    login,
-    signup,
+    Home: LandingPageScreen,
+    CreateEvent: CreateEventScreen,
+    Profile: ProfileScreen,
+    Login: Login,
+    SignUp: SignUp,
+    EventList: EventList
   },
   {
-    initialRouteName: 'signup'
+  initialRouteName: 'Home'  
   }
-)
+);
 
-
-export default App
+export default createAppContainer(AppNavigator);
