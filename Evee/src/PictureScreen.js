@@ -22,3 +22,5 @@ class PictureScreen extends React.Component{
         );
     }
 }
+
+export default PictureScreen;
