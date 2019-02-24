@@ -28,6 +28,13 @@ class LandingPageScreen extends React.Component {
             this.props.navigation.navigate('EventList')
           }
         />
+          <Button
+          title="Chats"
+          onPress={() =>
+            this.props.navigation.navigate('Chats')
+          }
+        />
+
         <Button
           title="signup"
           onPress={() =>

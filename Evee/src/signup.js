@@ -13,7 +13,10 @@ handleSignUp = () => {
         .then(user => this.props.navigation.navigate('Main'))
         .catch(error => this.setState({ errorMessage: error.message }))
 }
-
+// username, homelocation and date of birth has to send to firebase  
+// see https://www.firebase.com/docs/web/guide/user-auth.html#section-storing for more infos
+// datepicker has to be implemented
+// maybe also implement google and fb auth next
 render() {
     return (
         <View style={styles.container}>
@@ -37,6 +40,18 @@ render() {
             onChangeText={password => this.setState({ password })}
             value={this.state.password}
             />
+                    <TextInput
+        autoCapitalize="none"
+        placeholder="Username (does nothing right now)"
+        style={styles.textInput}
+        value={this.state.Username}
+        />
+        <TextInput
+        autoCapitalize="none"
+        placeholder="Homelocation (does nothing right now)"
+        style={styles.textInput}
+        value={this.state.Homelocation}
+        />
             <Button title="Sign Up" onPress={this.handleSignUp} />
             <Button
             title="Already have an account? Login"

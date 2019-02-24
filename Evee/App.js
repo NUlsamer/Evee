@@ -11,6 +11,7 @@ import CreateEventScreen from './src/CreateEventScreen';
 import EventList from './src/EventList';
 import FavoriteEventsScreen from './src/LandingPageScreen'; 
 import PictureScreen from './src/PictureScreen';
+import Chats from './src/Chats';
 
 const AppNavigator = createStackNavigator ( 
   {
@@ -22,6 +23,7 @@ const AppNavigator = createStackNavigator (
     EventList: EventList,
     FavoriteEvents: FavoriteEventsScreen,
     Picture: PictureScreen,
+    Chats: Chats,
   },
   {
   initialRouteName: 'Home'  
