@@ -1,4 +1,10 @@
 {
   "name": "Evee",
-  "displayName": "Evee"
+  "displayName": "Evee",
+  "expo": {
+    "name": "Evee",
+    "slug": "Evee",
+    "sdkVersion": "32.0.0",
+    "privacy": "public"
+  }
 }
