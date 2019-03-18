@@ -3,15 +3,15 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 //import screens
-import LandingPageScreen from './src/LandingPageScreen';
-import Login from './src/LoginScreen';
-import SignUp from './src/SignupScreen';
-import ProfileScreen from './src/ProfileScreen';
-import CreateEventScreen from './src/CreateEventScreen';
-import EventList from './src/EventList';
-import FavoriteEventsScreen from './src/LandingPageScreen'; 
-import PictureScreen from './src/PictureScreen';
-import Chats from './src/Chats';
+import LandingPageScreen from './Screens/LandingPageScreen';
+import Login from './Screens/LoginScreen';
+import SignUp from './Screens/SignupScreen';
+import ProfileScreen from './Screens/ProfileScreen';
+import CreateEventScreen from './Screens/CreateEventScreen';
+import EventList from './Screens/EventList';
+import FavoriteEventsScreen from './Screens/LandingPageScreen'; 
+import PictureScreen from './Screens/PictureScreen';
+import Chats from './Screens/Chats';
 
 const AppNavigator = createStackNavigator ( 
   {
