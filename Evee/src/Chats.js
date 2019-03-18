@@ -44,5 +44,4 @@ const TabNavigator = createMaterialTopTabNavigator (
 }
 )
 
-export default Chats;
 export default createAppContainer(TabNavigator);

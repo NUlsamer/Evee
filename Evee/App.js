@@ -4,7 +4,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 //import screens
 import LandingPageScreen from './src/LandingPageScreen';
-import Login from './src/LoginScreenScreen';
+import Login from './src/LoginScreen';
 import SignUp from './src/SignupScreen';
 import ProfileScreen from './src/ProfileScreen';
 import CreateEventScreen from './src/CreateEventScreen';

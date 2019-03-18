@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button} from 'react-native';
 import firebase from 'react-native-firebase';
-import SignUp from './signup';
+import SignUp from './SignupScreen';
 
 class ProfileScreen extends React.Component {
     signOut = async () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, Button} from 'react-native'
 import firebase from 'react-native-firebase'
-import SignUp from './signup';
+
 
 class PictureScreen extends React.Component{
 
