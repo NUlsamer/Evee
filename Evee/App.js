@@ -1,33 +1,58 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 //import screens
-import LandingPageScreen from './Screens/LandingPageScreen';
+import HomeScreen from './Screens/HomeScreen';
 import Login from './Screens/LoginScreen';
-import SignUp from './Screens/SignupScreen';
+import SignUp from './Screens/SignUp/SignupScreen';
 import ProfileScreen from './Screens/ProfileScreen';
 import CreateEventScreen from './Screens/CreateEventScreen';
 import EventList from './Screens/EventList';
-import FavoriteEventsScreen from './Screens/LandingPageScreen'; 
-import PictureScreen from './Screens/PictureScreen';
+import FavoriteEventsScreen from './Screens/SignUp/FavoriteEventsScreen'; 
+import PictureScreen from './Screens/SignUp/PictureScreen';
 import Chats from './Screens/Chats';
+import LandingPageScreen from './Screens/LandingPageScreen';
 
 const AppNavigator = createStackNavigator ( 
   {
-    Home: LandingPageScreen,
+    Home: HomeScreen,
     CreateEvent: CreateEventScreen,
     Profile: ProfileScreen,
     Login: Login,
-    SignUp: SignUp,
     EventList: EventList,
-    FavoriteEvents: FavoriteEventsScreen,
-    Picture: PictureScreen,
     Chats: Chats,
   },
   {
   initialRouteName: 'Home'  
   }
 );
+const LoginNavigator = createStackNavigator (
+{
+LoginNav: Login,
+},
+{
+  initialRouteName: 'LoginNav'
+}
+)
+const SignUpNavigator = createStackNavigator (
+{
+  LandingPage: LandingPageScreen,
+  SignUpNav: SignUp,
+  FavoriteEvents: FavoriteEventsScreen,
+  Picture: PictureScreen
+},
+{
+  initialRouteName: 'LandingPage'
+}
+);
 
-export default createAppContainer(AppNavigator);
+export default createAppContainer(createSwitchNavigator( 
+  { 
+    SignUp: SignUpNavigator, 
+    App: AppNavigator,
+    Login: LoginNavigator
+  }, 
+    {
+      initialRouteName: 'SignUp'
+}));

@@ -4,6 +4,7 @@ import { createMaterialTopTabNavigator, createAppContainer } from 'react-navigat
 
 
 class Chats extends React.Component {
+    
     render() {
         return(
         <View>

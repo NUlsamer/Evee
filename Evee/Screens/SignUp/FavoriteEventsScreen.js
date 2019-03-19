@@ -22,3 +22,5 @@ class FavoriteEventsScreen extends React.Component{
         );
     }
 }
+
+export default FavoriteEventsScreen;
