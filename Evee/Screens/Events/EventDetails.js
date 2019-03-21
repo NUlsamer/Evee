@@ -2,14 +2,18 @@ import React from 'react'
 import { StyleSheet, View, Text, Button} from 'react-native'
 
 export default class EventDetails extends React.Component {
-    state = {EventID: '', Description: '', Location: '', EventName: '', Eventtags: [], errorMessage: null }
+    state = { Organizer: '', EventID: '', Description: '', Location: '', EventName: '', Eventtags: [], errorMessage: null }
 render() {
+
+    const { navigation } = this.props;
+    const EventID = navigation.getParam('EventID', 'NO-ID');
 return (
     <View>
-        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <View>
             <Text>{this.state.EventName}</Text>
             <Text>{this.state.Description}</Text>
             <Text>Time</Text>
+            <Text>EventID: {JSON.stringify(EventID)}</Text>
             </View>
         <View style={styles.container}>
             <View style={styles.buttonContainer}>
@@ -44,12 +48,12 @@ return (
 }
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+//        flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
     },
     buttonContainer: {
-        flex: 1,
+//        flex: 1,
     }
 })

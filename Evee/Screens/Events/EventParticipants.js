@@ -10,6 +10,7 @@ render() {
     return(
         <View>
             <Text>Participants come here</Text>
+            <Text>{this.EventID}</Text>
         </View>
 );
 }

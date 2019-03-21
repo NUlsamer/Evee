@@ -13,6 +13,9 @@ import FavoriteEventsScreen from './Screens/SignUp/FavoriteEventsScreen';
 import PictureScreen from './Screens/SignUp/PictureScreen';
 import Chats from './Screens/Chats';
 import LandingPageScreen from './Screens/LandingPageScreen';
+import EventDetails from './Screens/Events/EventDetails';
+import EventParticipants from './Screens/Events/EventParticipants';
+
 
 const AppNavigator = createStackNavigator ( 
   {
@@ -47,11 +50,20 @@ const SignUpNavigator = createStackNavigator (
 }
 );
 
+const EventNav = createStackNavigator (
+{
+  EventDetails: EventDetails,
+  EventParticipants: EventParticipants,
+}
+
+)
+
 export default createAppContainer(createSwitchNavigator( 
   { 
     SignUp: SignUpNavigator, 
     App: AppNavigator,
-    Login: LoginNavigator
+    Login: LoginNavigator,
+    Events: EventNav,
   }, 
     {
       initialRouteName: 'SignUp'
