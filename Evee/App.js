@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createMaterialTopTabNavigator, createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 //import screens
 import HomeScreen from './Screens/HomeScreen';
@@ -11,7 +11,9 @@ import CreateEventScreen from './Screens/CreateEventScreen';
 import EventList from './Screens/EventList';
 import FavoriteEventsScreen from './Screens/SignUp/FavoriteEventsScreen'; 
 import PictureScreen from './Screens/SignUp/PictureScreen';
-import Chats from './Screens/Chats';
+import MainChatsScreen from './Screens/Chats/MainChatsScreen';
+import PopUpChatsScreen from './Screens/Chats/PopUpChatsScreen';
+import GroupChatsScreen from './Screens/Chats/GroupChatsScreen';
 import LandingPageScreen from './Screens/LandingPageScreen';
 import EventDetails from './Screens/Events/EventDetails';
 import EventParticipants from './Screens/Events/EventParticipants';
@@ -24,12 +26,23 @@ const AppNavigator = createStackNavigator (
     Profile: ProfileScreen,
     Login: Login,
     EventList: EventList,
-    Chats: Chats,
   },
   {
   initialRouteName: 'Home'  
   }
 );
+
+const ChatNavigator = createMaterialTopTabNavigator (
+  {
+      Chats: MainChatsScreen,
+      PopUpChats: PopUpChatsScreen,
+      GroupChats: GroupChatsScreen,
+  },
+  {
+  initialRouteName: 'Chats'
+  }
+  )
+
 const LoginNavigator = createStackNavigator (
 {
 LoginNav: Login,
@@ -64,6 +77,7 @@ export default createAppContainer(createSwitchNavigator(
     App: AppNavigator,
     Login: LoginNavigator,
     Events: EventNav,
+    Chats: ChatNavigator,
   }, 
     {
       initialRouteName: 'SignUp'
