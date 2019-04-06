@@ -29,6 +29,8 @@ const AppNavigator = createStackNavigator (
     CreateEvent: CreateEventScreen,
     Profile: ProfileScreen,
     EventList: EventList,
+    EventDetails: EventDetails,
+    EventParticipants: EventParticipants,
   },
   {
   initialRouteName: 'Home'  
@@ -56,22 +58,15 @@ const SignUpNavigator = createStackNavigator (
 }
 );
 
-const EventNav = createStackNavigator (
-{
-  EventDetails: EventDetails,
-  EventParticipants: EventParticipants,
-}
-
-)
 
 const ChatNav = createMaterialTopTabNavigator (
   {
-      Chats: MainChatsScreen,
-      PopUpChats: PopUpChatsScreen,
-      GroupChats: GroupChatsScreen,
+      MainChats: {screen: MainChatsScreen },
+      PopUpChats: {screen: PopUpChatsScreen},
+      GroupChats: {screen: GroupChatsScreen },
   },
   {
-  initialRouteName: 'Chats'
+  initialRouteName: 'MainChats'
   }
   )
 const HomeNav = 
@@ -80,7 +75,8 @@ createBottomTabNavigator(
     Home: {screen: AppNavigator},
     List: {screen: EventList},
     Chats: {screen: ChatNav},
-  },{
+  },
+  {
   initialRouteName: 'Home'}
   
   )
@@ -88,7 +84,7 @@ export default createAppContainer(createSwitchNavigator(
   { 
   Home: HomeNav,
   SignUp: SignUpNavigator,
-Login: LoginNavigator}, 
+  Login: LoginNavigator,}, 
     {
       //hier abfrage mit ? ob user eingeloggt ist
       initialRouteName: 'SignUp'

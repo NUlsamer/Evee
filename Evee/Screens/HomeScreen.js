@@ -23,25 +23,6 @@ class HomeScreen extends React.Component {
             this.props.navigation.navigate('Profile')
           }
         />
-          <Button
-          title="View Events"
-          onPress={() =>
-            this.props.navigation.navigate('EventList')
-          }
-        />
-          <Button
-          title="Chats"
-          onPress={() =>
-            this.props.navigation.navigate('Chats')
-          }
-        />
-
-        <Button
-          title="signup"
-          onPress={() =>
-            this.props.navigation.navigate('SignUpNav')
-          }
-        />
         </View>
       );
     }
