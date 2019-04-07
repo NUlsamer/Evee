@@ -6,7 +6,7 @@ class MainChatsScreen extends React.Component {
     render() {
         return(
         <View>
-        <Text>Your Main Chats</Text>
+        <Text>Your Chats</Text>
         </View>
         )
     }

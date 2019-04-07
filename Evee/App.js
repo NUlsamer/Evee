@@ -61,12 +61,12 @@ const SignUpNavigator = createStackNavigator (
 
 const ChatNav = createMaterialTopTabNavigator (
   {
-      MainChats: {screen: MainChatsScreen },
-      PopUpChats: {screen: PopUpChatsScreen},
-      GroupChats: {screen: GroupChatsScreen },
+      Chats: {screen: MainChatsScreen },
+      //PopUpChats: {screen: PopUpChatsScreen},
+      //GroupChats: {screen: GroupChatsScreen },
   },
   {
-  initialRouteName: 'MainChats'
+  initialRouteName: 'Chats'
   }
   )
 const HomeNav = 
