@@ -5,14 +5,15 @@ import { GiftedChat } from 'react-native-gifted-chat';
 
 class ChatScreen extends React.Component{
 
-    state = {messages: [],};
+    state = { messages: [] };
 
     get User(){
     //read out user here
+        return 'user123'
     }
     onSend(messages = []) {
         this.setState(previousState => ({
-        messages: GiftedChat.append(previousState.messages, messages),
+            messages: GiftedChat.append(previousState.messages, messages),
         }))
     }
     

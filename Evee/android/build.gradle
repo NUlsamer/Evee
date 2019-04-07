@@ -5,8 +5,8 @@ buildscript {
     afterEvaluate {project ->
         if (project.hasProperty("android")) {
             android {
-                compileSdkVersion compileSdkVersion
-                buildToolsVersion "$buildToolsVersion"
+                compileSdkVersion 28
+                buildToolsVersion '28.0.3'
             }
         }
     }
