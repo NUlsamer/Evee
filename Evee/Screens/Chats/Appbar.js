@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 //import * as React from 'react';
 import { Text, View, Platform, StyleSheet } from 'react-native';
 import { Colors,  Appbar,  FAB,  Switch,  Paragraph,  withTheme} from 'react-native-paper';
-import type { Theme } from 'react-native-paper/types';
+import type ,{ Theme } from 'react-native-paper/types';
 
 type Props = {
   navigation: any,

@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, SectionList, ScrollView} from 'react-native';
-import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
+import {Platform, StyleSheet, Text, View, SectionList, ScrollView, TouchableOpacity} from 'react-native';
+import { Avatar, Button, Card, Title, Paragraph, Searchbar } from 'react-native-paper';
 
 
 class EventList extends React.Component {
+
     render() {
         return (
             <ScrollView style={[styles.container, { backgroundColor: 'grey' }]}
                 contentContainerStyle={styles.content}>
+            <Searchbar 
+            placeholder = "Search Events"
+            />
             <Card style={styles.card}>
                 <Card.Title title="Hausfeier" subtitle="XYZ Stadt" />
                 <Card.Content>
