@@ -63,7 +63,8 @@ const SignUpNavigator = createStackNavigator (
 const ChatNav = createStackNavigator (
   {
       Chats: {screen: MainChatsScreen },
-      Settings: { screen: Settings}
+      Settings: { screen: Settings},
+      Profile: { screen: ProfileScreen}
       //PopUpChats: {screen: PopUpChatsScreen},
       //GroupChats: {screen: GroupChatsScreen },
   },

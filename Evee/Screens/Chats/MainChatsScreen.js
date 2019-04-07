@@ -9,11 +9,14 @@ export default class MainChatsScreen extends React.Component {
         return {
           headerTitle: 'Chat',
           headerRight: (
-            <TouchableOpacity onPress ={() => navigation.navigate('Settings')} style={{ marginRight: 10 }}>
-                <View>
-                    <Icon name="ios-settings" type='ionicon' size={30} color="rgb(49, 49, 49)" />
-                </View>
+          <View style={{ flexDirection: 'row' }}>
+            <TouchableOpacity onPress ={() => navigation.navigate('Settings')}>
+                <Icon name="ios-settings" type='ionicon' size={30} style={{ marginRight: 15 }} color="rgb(49, 49, 49)" />
             </TouchableOpacity>
+            <TouchableOpacity onPress ={() => navigation.navigate('Profile')}>
+                <Icon name="ios-person" type='ionicon' size={30} style={{ marginRight: 15 }} color="rgb(49, 49, 49)" />
+            </TouchableOpacity>
+           </View>
          ),
        }
     };
