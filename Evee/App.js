@@ -17,8 +17,9 @@ import EventList from './Screens/EventListScreen';
 import FavoriteEventsScreen from './Screens/SignUp/FavoriteEventsScreen'; 
 import PictureScreen from './Screens/SignUp/PictureScreen';
 import MainChatsScreen from './Screens/Chats/MainChatsScreen';
-import PopUpChatsScreen from './Screens/Chats/PopUpChatsScreen';
-import GroupChatsScreen from './Screens/Chats/GroupChatsScreen';
+import Settings from './Screens/Chats/Appbar';
+//import PopUpChatsScreen from './Screens/Chats/PopUpChatsScreen';
+//import GroupChatsScreen from './Screens/Chats/GroupChatsScreen';
 import LandingPageScreen from './Screens/LandingPageScreen';
 import EventDetails from './Screens/Events/EventDetails';
 import EventParticipants from './Screens/Events/EventParticipants';
@@ -59,9 +60,10 @@ const SignUpNavigator = createStackNavigator (
 );
 
 
-const ChatNav = createMaterialTopTabNavigator (
+const ChatNav = createStackNavigator (
   {
       Chats: {screen: MainChatsScreen },
+      Settings: { screen: Settings}
       //PopUpChats: {screen: PopUpChatsScreen},
       //GroupChats: {screen: GroupChatsScreen },
   },
