@@ -13,7 +13,10 @@ class ProfileScreen extends React.Component {
             console.log(error);
         }
     }
-*/  
+*/  static navigationOptions = {
+        title: 'Profile',
+    };
+
     render() {
 //        const user = firebase.auth().currentUser;
 

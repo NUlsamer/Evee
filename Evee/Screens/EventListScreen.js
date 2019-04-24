@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
         padding: 4,
     },
     card: {
+        rotate: 45,
         margin: 4,
     },
 });
