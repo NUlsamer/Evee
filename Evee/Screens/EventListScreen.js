@@ -152,7 +152,6 @@ const styles = StyleSheet.create({
     ]
     },
     TouchableOpacity: {
-        //änderung
         paddingRight: 10,
         paddingLeft: 10,
     },
