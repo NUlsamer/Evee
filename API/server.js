@@ -19,11 +19,13 @@ app.use( helmet() );
 
 const users = require( './routes/users' );
 const events = require( './routes/events' );
+const pop_ups = require( './routes/pop_ups' );
 const connect = require( './lib/connect' );
 
 app.use( connect.connect );
 app.use( '/auth', users );
-app.use( '/event', events );
+app.use( '/events', events );
+app.use( '/pop_ups', pop_ups );
 app.use( connect.close );
 
 app.use( ( error, request, response, next ) => {
